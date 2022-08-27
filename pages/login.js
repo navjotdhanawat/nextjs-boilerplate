@@ -1,5 +1,4 @@
-import styles from "../styles/Home.module.css";
-import Layout from "../components/mainlayout";
+import Layout from "../components/layout";
 
 const Login = () => {
   return <h6>Welcome to Login</h6>;

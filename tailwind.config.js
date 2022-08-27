@@ -8,7 +8,14 @@ module.exports = withMT({
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      padding: {},
+      spacing: {
+        112: "28rem",
+        128: "32rem",
+        88: "22rem",
+      },
+    },
   },
   plugins: [],
 });

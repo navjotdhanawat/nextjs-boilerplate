@@ -7,11 +7,7 @@ function App({ Component, pageProps }) {
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout || ((page) => page);
 
-  return (
-    <ThemeProvider>
-      <>{getLayout(<Component {...pageProps} />)}</>
-    </ThemeProvider>
-  );
+  return <>{getLayout(<Component {...pageProps} />)}</>;
 }
 
-export default appWithTranslation(App);
+export default App;
