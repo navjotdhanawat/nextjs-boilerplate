@@ -11,9 +11,10 @@ module.exports = withMT({
     extend: {
       padding: {},
       spacing: {
+        88: "22rem",
         112: "28rem",
         128: "32rem",
-        88: "22rem",
+        160: "40rem",
       },
     },
   },

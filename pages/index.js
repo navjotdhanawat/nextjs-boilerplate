@@ -2,11 +2,63 @@ import styles from "../styles/Home.module.css";
 import Layout from "../components/layout";
 import { Button } from "@material-tailwind/react";
 import Image from "next/image";
+import Icon from "../components/icon";
+import Testimonials from "../components/testimonials";
 
 const Home = () => {
+  const features = [
+    {
+      feature: "SUBSCRIPTION PAYMENTS",
+      descrption: "",
+      icon: "",
+      color: "bg-indigo-500",
+    },
+    {
+      feature: "SUBSCRIPTION PAYMENTS",
+      descrption: "",
+      icon: "",
+      color: "bg-indigo-300",
+    },
+    {
+      feature: "SUBSCRIPTION PAYMENTS",
+      descrption: "",
+      icon: "",
+      color: "bg-purple-300",
+    },
+    {
+      feature: "SUBSCRIPTION PAYMENTS",
+      descrption: "",
+      icon: "",
+      color: "bg-pink-300",
+    },
+    {
+      feature: "SUBSCRIPTION PAYMENTS",
+      descrption: "",
+      icon: "",
+      color: "bg-indigo-500",
+    },
+    {
+      feature: "SUBSCRIPTION PAYMENTS",
+      descrption: "",
+      icon: "",
+      color: "bg-indigo-300",
+    },
+    {
+      feature: "SUBSCRIPTION PAYMENTS",
+      descrption: "",
+      icon: "",
+      color: "bg-purple-300",
+    },
+    {
+      feature: "SUBSCRIPTION PAYMENTS",
+      descrption: "",
+      icon: "",
+      color: "bg-pink-300",
+    },
+  ];
   return (
     <>
-      <div className="h-96 w-full bg-gray-50 relative overflow-y-auto bg-gradient-to-r from-indigo-500 via-purple-300 to-pink-300"></div>
+      <div className=" h-96 w-full bg-gray-50 relative overflow-y-auto bg-gradient-to-r from-indigo-500 via-purple-300 to-pink-300"></div>
       <div className="hidden md:block top-96 z-10 absolute right-44 lg:right-80">
         <Image width={300} height={300} src="/assets/img-1.svg" alt="Logo" />
       </div>
@@ -19,7 +71,7 @@ const Home = () => {
       <span className="text-white z-10 lg:text-6xl text-4xl font-extrabold absolute top-96 left-10 lg:mt-0 mt-5">
         SaaS Makes
       </span>
-      <span className="z-10 lg:text-6xl text-4xl font-extrabold absolute top-112 left-10">
+      <span className="z-10 lg:text-6xl text-4xl font-extrabold absolute top-112 left-10 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-300 to-pink-300">
         Easy Pizy
       </span>
 
@@ -35,8 +87,8 @@ const Home = () => {
           Get started
         </a>
       </div>
-      <div className="text-center h-128 w-full bg-gray-50 relative overflow-y-auto">
-        <span className="text-gray-400 font-serif">
+      <div className="text-center w-full bg-gray-50 relative overflow-y-auto">
+        <span className="text-gray-700 text-sm font-semibold">
           SOME OF OUT TRUSTED CLIENTS
         </span>
         <div className="p-10 md:flex sm:block md:space-x-12 lg:space-x-32 justify-center">
@@ -91,6 +143,42 @@ const Home = () => {
             />
           </div>
         </div>
+      </div>
+      <div className="pt-20 text-center w-full bg-gray-50 relative overflow-y-auto">
+        <span className="text-gray-700 text-2xl font-semibold">FEATURES</span>
+        <div className="pt-10 w-full bg-gray-50 relative overflow-y-auto flex items-center justify-center">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
+            {features.map(({ feature, icon, descrption, color }) => {
+              return (
+                <div
+                  key={feature}
+                  className="relative bg-white py-6 px-6 rounded-3xl w-64 my-4 shadow-xl"
+                >
+                  <div
+                    className={`${color} text-white flex items-center absolute rounded-full py-4 px-4 shadow-xl left-4 -top-6`}
+                  >
+                    <Icon iconName={"FaUser"} />
+                  </div>
+                  <div className="mt-8">
+                    <p className="text-xl font-semibold my-2">{feature}</p>
+                    <div className="flex space-x-2 text-gray-400 text-sm">
+                      <Icon iconName={"FaUser"} />
+                      <p>Marketing Team</p>
+                    </div>
+                    <div className="flex space-x-2 text-gray-400 text-sm my-3">
+                      <Icon iconName={"FaUser"} />
+                      <p>1 Weeks Left</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      <div className="pt-20 text-center w-full bg-gray-50 relative overflow-y-auto">
+        <Testimonials />
       </div>
     </>
   );
